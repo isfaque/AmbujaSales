@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/MyToolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/activity_performance_rl_one"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/activity_performance_tv_select_year_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Select Year"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textColor="@android:color/black"/>
+
+            <Spinner
+                android:id="@+id/activity_performance_spinner_select_year"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:hint="No. Of People"
+                android:entries="@array/select_year"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_alignBaseline="@+id/activity_performance_tv_select_year_title"/>
+
+            <Button
+                android:id="@+id/activity_performance_btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Submit"
+                android:theme="@style/AccentButton"
+                android:layout_gravity="end"
+                android:layout_marginRight="3dp"/>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:layout_below="@id/activity_performance_rl_one"
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+
+
+
+</RelativeLayout>

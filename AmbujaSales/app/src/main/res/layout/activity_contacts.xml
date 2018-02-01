@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccentTransparent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/MyToolbar"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/activity_customer_rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:background="#ffffff">
+
+            <EditText
+                android:id="@+id/activity_contacts_et_contact_search"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Search"
+                android:textSize="14sp"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:paddingLeft="16dp"
+                android:drawablePadding="10dp"
+                android:elevation="2dp"
+                android:background="#ffffff"/>
+
+            <Button
+                android:id="@+id/activity_contacts_btn_clear"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_close_icon"
+                android:theme="@style/AccentButton"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_below="@+id/activity_customer_rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/activity_contacts_btn_add_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            app:backgroundTint="#FF9800"
+            android:tint="@android:color/white"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
